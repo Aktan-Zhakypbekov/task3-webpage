@@ -1,0 +1,44 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container {
+  background-color: aquamarine;
+  width: 1470px;
+  height: 900px;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 1fr;
+
+  border-radius: 59px;
+}
+.menu {
+  background-color: burlywood;
+  border-top-left-radius: 59px;
+  border-bottom-left-radius: 59px;
+}
+.content {
+  background-color: cadetblue;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 160px 1fr;
+}
+.content__nav {
+  background-color: coral;
+  border-top-right-radius: 59px;
+}
+
+.content__main {
+  background-color: darkcyan;
+  display: grid;
+  grid-template-columns: 660px 560px;
+  grid-template-rows: 1fr;
+}
+.content__main__section1 {
+  background-color: darkgray;
+}
+.content__main__section2 {
+  background-color: darkolivegreen;
+  border-bottom-right-radius: 50px;
+}
