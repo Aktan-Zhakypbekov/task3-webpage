@@ -3,6 +3,10 @@
   padding: 0px;
   box-sizing: border-box;
 }
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
 body {
   display: flex;
   justify-content: center;
@@ -36,16 +40,51 @@ button {
 .menu__logo {
   background-color: blueviolet;
   font-size: 1.2rem;
+  display: flex;
+}
+.menu__logo__icon {
+  width: 45px;
+  height: 30px;
+  background-color: aquamarine;
+  margin: 0.2rem;
+}
+.menu__logo__icon img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.menu__logo__title {
+  background-color: chocolate;
+  margin: 0.2rem;
 }
 .menu__options {
   background-color: brown;
-  margin-bottom: 210px;
+  margin-bottom: 150px;
   font-size: 0.9rem;
   font-family: "Lato", sans-serif;
 }
 .menu__options__option {
   margin: 1rem;
+  display: flex;
+  background-color: cyan;
 }
+.menu__options__option__icon {
+  width: 30px;
+  height: 30px;
+  background-color: cornflowerblue;
+  margin: 0.2rem;
+}
+.menu__options__option__icon img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.menu__options__option__text {
+  background-color: crimson;
+  margin: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .menu__update {
   background-color: crimson;
   display: flex;
@@ -54,14 +93,17 @@ button {
   align-items: center;
 }
 .menu__update__icon {
-  width: 40px;
-  height: 20px;
+  width: 120px;
+  height: 120px;
   margin: 1rem;
   background-color: cyan;
 }
 .menu__update__text {
   margin: 1rem;
   font-size: 0.7rem;
+  width: 130px;
+  text-align: center;
+  background-color: darkgreen;
 }
 .menu__update__button {
   width: 160px;
@@ -114,14 +156,32 @@ button {
 .content__header__shortcuts__messanger {
   background-color: darkolivegreen;
   margin: 1rem;
+  width: 24px;
+  height: 20px;
 }
 .content__header__shortcuts__bell {
   background-color: darkorange;
   margin: 1rem;
+  width: 26px;
+  height: 28px;
 }
 .content__header__shortcuts__account {
   background-color: darkorchid;
   margin: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.content__header__shortcuts__account__icon {
+  width: 40px;
+  height: 40px;
+  background-color: lawngreen;
+  margin: 0.5rem;
+}
+.content__header__shortcuts__account__text {
+  background-color: lightcoral;
+  margin: 0.5rem;
+  margin-left: 0rem;
 }
 
 .content__main {
@@ -247,6 +307,23 @@ button {
   justify-content: space-evenly;
   align-items: flex-start;
 }
+.content__main__section1__transaction-history__content__receivers__receiver {
+  display: flex;
+  background-color: darkturquoise;
+  width: 100%;
+  border-bottom: 0.5px solid #ececec;
+}
+.content__main__section1__transaction-history__content__receivers__receiver__icon {
+  width: 22px;
+  height: 22px;
+  background-color: darkorange;
+  margin: 0.2rem;
+}
+.content__main__section1__transaction-history__content__receivers__receiver__text {
+  background-color: darkorchid;
+  margin: 0.2rem;
+}
+
 .content__main__section1__transaction-history__content__types {
   background-color: chartreuse;
   width: 125px;
@@ -254,6 +331,10 @@ button {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
+}
+.content__main__section1__transaction-history__content__types__type {
+  width: 100%;
+  border-bottom: 0.5px solid #ececec;
 }
 .content__main__section1__transaction-history__content__dates {
   background-color: coral;
@@ -263,6 +344,10 @@ button {
   justify-content: space-evenly;
   align-items: flex-start;
 }
+.content__main__section1__transaction-history__content__dates__date {
+  width: 100%;
+  border-bottom: 0.5px solid #ececec;
+}
 .content__main__section1__transaction-history__content__amounts {
   background-color: cornflowerblue;
   width: 125px;
@@ -271,6 +356,10 @@ button {
   justify-content: space-evenly;
   align-items: flex-end;
   font-family: "Lato", sans-serif;
+}
+.content__main__section1__transaction-history__content__amounts__amount {
+  width: 100%;
+  border-bottom: 0.5px solid #ececec;
 }
 
 .content__main__section2 {
@@ -321,6 +410,31 @@ button {
   justify-content: space-around;
   align-items: center;
 }
+.content__main__section2__goals__content__item__numbers {
+  background-color: darkturquoise;
+}
+.content__main__section2__goals__content__item__numbers__money {
+  background-color: gainsboro;
+  margin: 0.2rem;
+}
+.content__main__section2__goals__content__item__numbers__date {
+  background-color: gold;
+  margin: 0.2rem;
+}
+
+.content__main__section2__goals__content__item__text {
+  background-color: deeppink;
+}
+.content__main__section2__goals__content__item__text__name {
+  background-color: greenyellow;
+  margin: 0.2rem;
+}
+.content__main__section2__goals__content__item__text__icon {
+  background-color: forestgreen;
+  width: 34px;
+  height: 28px;
+  margin: 0.2rem;
+}
 
 .content__main__section2__stats {
   width: 490px;
@@ -361,11 +475,14 @@ button {
 .content__main__section2__stats__content__item {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 .content__main__section2__stats__content__item__icon {
   background-color: cornflowerblue;
+  width: 43px;
+  height: 44px;
+  margin: 0.2rem;
 }
 .content__main__section2__stats__content__item__bar {
   background-color: crimson;
@@ -419,6 +536,20 @@ button {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+.content__main__section2__new-transactions__content__people__icon__add-new {
+  width: 20px;
+  height: 20px;
+  background-color: #ffc145;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+.content__main__section2__new-transactions__content__people__icon__name {
+  font-size: 0.8rem;
 }
 .content__main__section2__new-transactions__content__people__icon__icon {
   width: 40px;
