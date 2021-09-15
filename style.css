@@ -98,9 +98,11 @@ button {
 }
 .menu__update__text {
   margin: 1rem;
-  font-size: 0.7rem;
   width: 130px;
   text-align: center;
+  font-weight: normal;
+  font-size: 10px;
+  color: #404040;
 }
 .menu__update__button {
   width: 160px;
@@ -172,6 +174,21 @@ button {
 .content__header__shortcuts__account__text {
   margin: 0.5rem;
   margin-left: 0rem;
+}
+.content__header__shortcuts__account__text__name {
+  font-weight: 600;
+  font-size: 14px;
+  color: #404040;
+}
+.content__header__shortcuts__account__text__acc-info {
+  font-weight: normal;
+  font-size: 14px;
+  color: #aeaeae;
+}
+.block-titles {
+  font-weight: 600;
+  font-size: 20.1118px;
+  color: #404040;
 }
 
 .content__main {
@@ -339,7 +356,7 @@ button {
   align-items: flex-start;
 }
 .content__main__section1__transaction-history__content {
-  width: 590px;
+  width: 580px;
   height: 260px;
   display: grid;
   grid-template-columns: 1fr;
@@ -408,7 +425,7 @@ button {
   align-items: center;
 }
 .content__main__section2__goals {
-  width: 490px;
+  width: 500px;
   height: 190px;
   display: grid;
   grid-template-columns: 1fr;
@@ -426,7 +443,7 @@ button {
 }
 .content__main__section2__goals__content {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 .content__main__section2__goals__content__item {
@@ -438,24 +455,35 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
 }
 .content__main__section2__goals__content__item__numbers {
+  margin-left: 24px;
 }
 .content__main__section2__goals__content__item__numbers__money {
   margin: 0.2rem;
+  font-weight: 600;
+  font-size: 23.9789px;
+  color: #696969;
 }
 .content__main__section2__goals__content__item__numbers__date {
   margin: 0.2rem;
+  font-weight: normal;
+  font-size: 14px;
+  color: #aeaeae;
 }
 
 .content__main__section2__goals__content__item__text {
+  margin-left: 24px;
 }
 .content__main__section2__goals__content__item__text__name {
   margin: 0.2rem;
+  font-weight: normal;
+  font-size: 20.1118px;
+  color: #404040;
 }
 .content__main__section2__goals__content__item__text__icon {
-  width: 34px;
+  width: 33px;
   height: 28px;
   margin: 0.2rem;
 }
@@ -501,13 +529,70 @@ button {
   height: 44px;
   margin: 0.2rem;
 }
-.content__main__section2__stats__content__item__bar {
+.icon-shopping {
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
+    0px 0px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+  background: #ffeada;
 }
+.icon-electronics {
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
+    0px 0px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+  background: #ddf9e4;
+}
+.icon-travels {
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
+    0px 0px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+  background: #e4f0ff;
+}
+.content__main__section2__stats__content__item__bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.content__main__section2__stats__content__item__bar__bar {
+  width: 367.74px;
+  height: 9.47px;
+  background: #f1f1f1;
+  border-radius: 13.617px;
+  margin: 0.1rem;
+}
+.shopping-progress-bar {
+  width: 195.35px;
+  height: 9.47px;
+  background: linear-gradient(270deg, #fcae73 0%, #f79042 99.18%);
+  border-radius: 10.7766px;
+}
+.electronics-progress-bar {
+  width: 62.12px;
+  height: 9.47px;
+  background: linear-gradient(90deg, #209d43 0%, #2bc255 100%);
+  border-radius: 10.7766px;
+}
+.travels-progress-bar {
+  width: 281.33px;
+  height: 9.47px;
+  background: #70a6e8;
+  border-radius: 10.7766px;
+}
+.content__main__section2__stats__content__item__bar__text {
+  font-weight: normal;
+  font-size: 14px;
+  color: #aeaeae;
+  margin: 0.1rem;
+}
+
 .content__main__section2__stats__content__item__percent {
+  font-weight: 600;
+  font-size: 23.9789px;
+  color: #696969;
+  align-self: flex-start;
 }
 
 .content__main__section2__new-transactions {
-  width: 490px;
+  width: 500px;
   height: 190px;
   display: flex;
   justify-content: space-between;
@@ -560,6 +645,9 @@ button {
 }
 .content__main__section2__new-transactions__content__people__icon__name {
   font-size: 0.8rem;
+  font-weight: normal;
+  font-size: 12px;
+  color: #404040;
 }
 .content__main__section2__new-transactions__content__people__icon__icon {
   width: 40px;
@@ -578,6 +666,7 @@ button {
   border: 1px solid #197bbd;
   box-sizing: border-box;
   border-radius: 8px;
+  margin: 0.1rem;
 }
 .content__main__section2__new-transactions__content__form__button {
   width: 130px;
@@ -585,6 +674,7 @@ button {
   border: none;
   background: #ffc145;
   border-radius: 13.617px;
+  margin: 0.1rem;
 }
 
 .content__main__section2__new-transactions__loans {
