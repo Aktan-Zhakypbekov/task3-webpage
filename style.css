@@ -46,11 +46,31 @@ button {
 .menu__logo {
   font-size: 1.2rem;
   display: flex;
+  margin-top: 3rem;
 }
 .menu__logo__icon {
   width: 45px;
   height: 30px;
   margin: 0.2rem;
+  position: relative;
+}
+.menu__logo__icon__add {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffc145;
+  border-radius: 50%;
+  color: #404040;
+  transform: rotate(-30deg);
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11.1442px;
+  left: 28px;
+  top: 1.5px;
 }
 .menu__logo__icon img {
   max-width: 100%;
@@ -60,7 +80,8 @@ button {
   margin: 0.2rem;
 }
 .menu__options {
-  margin-bottom: 150px;
+  margin-bottom: 120px;
+  margin-top: 30px;
   font-size: 0.8rem;
   color: #c7c7c7;
   font-family: "Lato", sans-serif;
@@ -95,9 +116,12 @@ button {
   width: 120px;
   height: 120px;
   margin: 1rem;
+  margin-bottom: 0rem;
 }
 .menu__update__text {
   margin: 1rem;
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
   width: 130px;
   text-align: center;
   font-weight: normal;
@@ -111,6 +135,7 @@ button {
   background: #ffc145;
   border-radius: 13.617px;
   margin: 1rem;
+  margin-top: 0.5rem;
 }
 
 .content {
@@ -240,6 +265,14 @@ button {
   justify-content: space-between;
   align-items: center;
 }
+.content__main__section1__cards__content__card__card-icon-cont {
+  display: flex;
+  align-items: center;
+}
+.next-prev {
+  font-size: 2rem;
+  color: #197bbd;
+}
 .content__main__section1__cards__content__card__card-icon {
   width: 340px;
   height: 205px;
@@ -249,7 +282,46 @@ button {
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
+  position: relative;
 }
+.card-cloud {
+  position: absolute;
+  width: 110px;
+  height: 135px;
+  background: rgba(255, 255, 255, 0.12);
+  top: 70px;
+  left: 210px;
+  z-index: 0;
+  border-top-left-radius: 46%;
+  border-top-right-radius: 46%;
+}
+.card-cloud:after,
+.card-cloud:before {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.12);
+  z-index: -1;
+}
+.card-cloud::after {
+  width: 20px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.12);
+  position: absolute;
+  top: 55px;
+  left: 110px;
+  border-bottom-right-radius: 25px;
+}
+.card-cloud:before {
+  width: 70px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.12);
+  position: absolute;
+  top: 55px;
+  left: -70px;
+  border-bottom-left-radius: 25%;
+  border-top-left-radius: 65%;
+}
+
 .content__main__section1__cards__content__card__card-icon__title {
   margin-left: 1.5rem;
 }
@@ -301,16 +373,27 @@ button {
 .new {
 }
 .content__main__section1__cards__content__card__card-data {
-  width: 320px;
+  width: 350px;
   margin-bottom: 0.4rem;
 }
 .content__main__section1__cards__content__card__card-data__bar {
-  margin: 0.3rem;
+  margin: 0.4rem;
+  width: 338.43px;
+  height: 9.47px;
+  background: #f1f1f1;
+  border-radius: 13.617px;
+  display: flex;
+}
+.content__main__section1__cards__content__card__card-data__bar__bar-progress {
+  width: 89.25px;
+  height: 9.06px;
+  background: #197bbd;
+  border-radius: 10.7766px;
 }
 .content__main__section1__cards__content__card__card-data__text {
   display: flex;
   justify-content: space-between;
-  margin: 0.3rem;
+  margin: 0.4rem;
 }
 .content__main__section1__cards__content__card__card-data__text__text {
   font-weight: normal;
@@ -328,8 +411,9 @@ button {
 
 .content__main__section1__cards__content__line {
   width: 1px;
-  height: 200px;
+  height: 190px;
   margin: 0.5rem;
+  background-color: #e8e8e8;
 }
 .content__main__section1__cards__content__balance {
   width: 145px;
@@ -382,7 +466,19 @@ button {
   font-size: 14px;
   color: #aeaeae;
 }
-
+.content__main__section1__cards__content__balance__deactivate-card__switch {
+  width: 45.69px;
+  height: 23.45px;
+  background: #ebebeb;
+  border-radius: 13.617px;
+  margin-bottom: 0.2rem;
+}
+.content__main__section1__cards__content__balance__deactivate-card__switch__toggler {
+  width: 23.45px;
+  height: 23.45px;
+  background: #cdcdcd;
+  border-radius: 13.617px;
+}
 .content__main__section1__transaction-history {
   width: 616px;
   height: 325px;
@@ -479,11 +575,12 @@ button {
   align-items: center;
 }
 .content__main__section2__goals {
-  width: 500px;
+  width: 525px;
   height: 190px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 50px 1fr;
+  margin-left: 1.2rem;
 }
 .content__main__section2__goals__title {
   display: flex;
@@ -493,15 +590,15 @@ button {
 .content__main__section2__goals__title__title {
   margin: 1rem;
   margin-left: 0.2rem;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 .content__main__section2__goals__content {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 .content__main__section2__goals__content__item {
-  width: 158px;
+  width: 157px;
   height: 170px;
   box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
     0px 0px 1px rgba(0, 0, 0, 0.04);
@@ -510,6 +607,15 @@ button {
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
+  margin-right: 0.85rem;
+}
+.last-item {
+  margin-right: 0rem;
+}
+.next {
+  font-size: 2rem;
+  color: #197bbd;
+  margin-left: 0rem;
 }
 .content__main__section2__goals__content__item__numbers {
   margin-left: 24px;
@@ -710,13 +816,17 @@ button {
 }
 .content__main__section2__new-transactions__content__form {
   margin-left: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 .content__main__section2__new-transactions__content__form__input {
   width: 175px;
   height: 36px;
   background: #ffffff;
-  /* primary */
-
+  color: #c7c7c7;
+  font-weight: 300;
+  font-size: 23.9789px;
   border: 1px solid #197bbd;
   box-sizing: border-box;
   border-radius: 8px;
@@ -740,7 +850,7 @@ button {
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
   border-radius: 19.0044px;
   position: relative;
-  background-color: brown;
+  background-color: #ed654c;
 }
 .content__main__section2__new-transactions__loans__text {
   width: 99px;
@@ -757,7 +867,7 @@ button {
 .cloud1 {
   width: 40px;
   height: 50px;
-  background: blue;
+  background: #d15842;
   position: absolute;
   top: 5px;
   left: 10px;
@@ -769,13 +879,13 @@ button {
 .cloud1:before {
   content: "";
   position: absolute;
-  background: blue;
+  background: #d15842;
   z-index: -1;
 }
 .cloud1::after {
   width: 40px;
   height: 30px;
-  background: blue;
+  background: #d15842;
   position: absolute;
   top: 20px;
   left: 23px;
@@ -785,7 +895,7 @@ button {
 .cloud1:before {
   width: 20px;
   height: 30px;
-  background: blue;
+  background: #d15842;
   position: absolute;
   top: 20px;
   left: -10px;
@@ -794,7 +904,7 @@ button {
 .cloud2 {
   width: 25px;
   height: 33px;
-  background: green;
+  background: #d15842;
   position: absolute;
   top: 5px;
   left: 100px;
@@ -807,13 +917,13 @@ button {
 .cloud2:before {
   content: "";
   position: absolute;
-  background: green;
+  background: #d15842;
   z-index: -1;
 }
 .cloud2::after {
   width: 20px;
   height: 20px;
-  background: green;
+  background: #d15842;
   position: absolute;
   top: 13px;
   left: 18px;
@@ -823,7 +933,7 @@ button {
 .cloud2::before {
   width: 20px;
   height: 20px;
-  background: green;
+  background: #d15842;
   position: absolute;
   top: 13px;
   left: -12px;
@@ -842,7 +952,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: brown;
+  color: #ed654c;
 }
 .loans-dollar-decor2 {
   width: 29.13px;
@@ -855,5 +965,5 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: brown;
+  color: #ed654c;
 }
